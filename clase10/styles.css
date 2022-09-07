@@ -1,0 +1,67 @@
+/*flexbox*/
+.container-flex {
+    flex-direction: row-reverse; /*row|column*/
+    border: 1px solid red;
+    display: flex;
+    background-color: beige;
+    justify-content: space-evenly; /*alinea el contenido */
+    /* height: 400px; */
+    /* align-items: flex-start; */
+    /* width: 50%; */
+    flex-wrap: wrap; /*nowrap*/
+
+}
+
+.container-item {
+    width: 100px;
+    height: 50px;
+    border: 2px solid yellow;
+    background-color: aqua;
+}
+
+/*media query: me sirve para cambiar los estilos cuando cambia la resolucion*/
+@media screen and (max-width:600px) {
+    .container-flex {
+        flex-direction: column;
+        background-color: blueviolet;
+    }
+    .container-item {
+        font-size: 2em;
+        color:blue
+    }
+}
+
+section {
+    height: 650px;
+    border: 1px solid blue;
+    margin: 10px;
+}
+
+section img {
+    margin: 15px;
+    width: 50%;
+}
+
+/*estilos para las section
+main section:first-child {
+    background-color: red;
+}
+
+main section:last-child {
+    background-color: rgb(0, 42, 255);
+}
+
+:nth-child(2)
+main section:nth-child(2) {
+    background-color: rgb(255, 204, 0);
+}
+*/
+section:nth-child(odd) {
+    background-color: rgb(255, 204, 0);
+}
+section:nth-child(even) {
+    background-color: rgb(0, 255, 4);
+}
+section:first-child {
+    background-color: rgb(255, 100, 0) !important;
+}
